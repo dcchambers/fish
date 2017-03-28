@@ -15,9 +15,14 @@ function goFishing(){
 }
 
 function sellFish(){
-  numMoney+=fishSellValue;
-  numFish--;
-  updateGame();
+  if (numFish < 1) {
+    document.getElementById('logContents').innerHTML="You don't have any fish to sell!<br>"+document.getElementById('logContents').innerHTML;
+  }
+  else {
+    numMoney+=fishSellValue;
+    numFish--;
+    updateGame();
+  }
 }
 
 function updateGame(){
