@@ -1,14 +1,19 @@
 #log {
-  width:33%;
+  width:25%;
   float:left;
 }
 
 #actions {
-  width:33%;
+  width:25%;
   float:left;
 }
 
 #items {
-  width:33%;
+  width:25%;
   float:left;
+}
+
+#store {
+    width:25%;
+    float:left;
 }

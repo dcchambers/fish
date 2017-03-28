@@ -2,6 +2,7 @@ var numWorms = 0;
 var numFish = 0;
 var numMoney = 0;
 var fishSellValue = 10;
+var numWormBins = 0;
 
 function digForWorms(){
   numWorms++;
@@ -30,6 +31,17 @@ function sellFish(){
   }
 }
 
+function buyWormBin(){
+  if (numMoney < 100) {
+    document.getElementById('logContents').innerHTML="You don't have enough money!<br>"+document.getElementById('logContents').innerHTML;
+  }
+  else {
+    numMoney = numMoney-100;
+    numWormBins++;
+    updateGame();
+  }
+}
+
 function updateGame(){
   //update game values and redraw screen
 
@@ -43,5 +55,7 @@ function updateGame(){
   //redraw screen with new item values
   document.getElementById('numWorms').innerHTML = numWorms;
   document.getElementById('numFish').innerHTML = numFish;
-  document.getElementById('numMoney').innerHTML= "$"+numMoney;
+  document.getElementById('numMoney').innerHTML = "$"+numMoney;
+
+  document.getElementById('numWormBins').innerHTML = numWormBins;
 }
