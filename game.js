@@ -33,5 +33,5 @@ function updateGame(){
   //redraw screen with new item values
   document.getElementById('numWorms').innerHTML = numWorms;
   document.getElementById('numFish').innerHTML = numFish;
-  document.getElementById('numMoney').innerHTML= numMoney;
+  document.getElementById('numMoney').innerHTML= "$"+numMoney;
 }
