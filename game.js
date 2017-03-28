@@ -9,9 +9,14 @@ function digForWorms(){
 }
 
 function goFishing(){
-  numWorms--;
-  numFish++;
-  updateGame();
+  if (numWorms < 1){
+    document.getElementById('logContents').innerHTML="You don't have any worms.<br>"+document.getElementById('logContents').innerHTML;
+  }
+  else {
+    numWorms--;
+    numFish++;
+    updateGame();
+  }
 }
 
 function sellFish(){
